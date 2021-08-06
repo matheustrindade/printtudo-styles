@@ -1,4 +1,4 @@
 # printtudo-styles
 
 Estilos da loja virtual da minha namorada.
-[acesse](https://printudo.lojaintegrada.com.br/)
+[acesse](https://www.print-td.com.br/)
