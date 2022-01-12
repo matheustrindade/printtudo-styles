@@ -1,6 +1,10 @@
 :root {
   --main: #001d3f;
+  --secondary: #ffffff;
+  --tertiary: #d4d4d4;
+  --text-primary: #333333;
   --text-secondary: #f3f3f3;
+  --text-tertiary: #b3b3b3;
   --secondary-button-bg: #fff;
   --print-pink: #e663b4;
   --print-yellow: #f4cd35;
@@ -76,7 +80,8 @@ a.bem-vindo span {
   box-shadow: 0 1px 5px rgba(136, 131, 131, 0.2);
 }
 
-.busca input {
+.busca input,
+.newsletter input {
   border: 0;
   border-radius: 0;
   height: 2.5rem;
@@ -137,10 +142,13 @@ a.bem-vindo span {
   width: 1.25rem;
 }
 
-.carrinho a span b.titulo {
+.carrinho a span b.titulo,
+.carrinho.vazio a span.titulo.vazio-text {
   color: var(--text-secondary);
   font-weight: 600;
 }
+
+/* MENU SUPERIOR */
 
 .menu.superior .nivel-um > li strong,
 .carrinho a span span {
@@ -166,4 +174,95 @@ a.bem-vindo span {
 
 .menu.superior .nivel-um > li:nth-child(even):hover {
   border-top-color: var(--print-yellow);
+}
+
+/* MENU LATERAL */
+
+.menu.lateral {
+  border: none !important;
+}
+
+.menu.lateral ul.nivel-um > li > a {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+
+.menu.lateral ul.nivel-um > li:last-child a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+
+.menu.lateral ul.nivel-um li > a strong {
+  color: var(--text-primary);
+}
+
+.menu.lateral ul.nivel-um i.icon-chevron-right {
+  background-color: var(--secondary-button-bg);
+}
+
+.menu.lateral ul.nivel-um i.icon-chevron-right::before {
+  color: var(--text-primary);
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+  border: none;
+  background-color: var(--main);
+}
+
+.newsletter button.newsletter-assinar {
+  background-color: var(--print-pink);
+  background-image: none;
+  border-radius: 0px;
+  height: 100%;
+  transition: 0.2s;
+}
+
+.newsletter button.newsletter-assinar:hover {
+  background-color: var(--print-yellow);
+}
+
+.newsletter button.newsletter-assinar:hover::before {
+  color: var(--text-primary);
+}
+
+.newsletter button.newsletter-assinar::before {
+  content: "enviar" !important;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.newsletter span.titulo {
+  color: var(--text-secondary);
+  font-weight: bold;
+}
+
+.newsletter .interno-conteudo p.texto-newsletter.newsletter-cadastro {
+  color: var(--text-tertiary);
+}
+
+/* MAIN */
+
+#corpo {
+  margin-bottom: 0px;
+}
+
+div.pagamento-selos {
+  background: none;
+  background-color: var(--secondary);
+}
+
+#rodape div.institucional.fundo-secundario {
+  background-color: var(--tertiary);
+  background-image: none !important;
+}
+
+#rodape div.institucional.fundo-secundario span.titulo {
+  color: var(--main);
+  font-weight: 600;
 }
